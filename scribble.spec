@@ -1,12 +1,12 @@
 Name:           scribble
 Version:        0.2
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Daemon that sends log files to a Scribe log server
 
 Group:          Development/Languages
 License:        GPLv3+
 URL:            https://github.com/zxvdr/scribble
-Source0:        https://github.com/zxvdr/scribble/raw/master/scribble
+Source0:        https://github.com/zxvdr/scribble/raw/master/scribble.py
 Source1:        https://github.com/zxvdr/scribble/raw/master/scribble.init
 Source2:        https://github.com/zxvdr/scribble/raw/master/logs.conf
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
@@ -46,6 +46,9 @@ if [ $1 -eq 0 ] ; then
 fi
 
 %changelog
+* Sat Jun 28 2014 Howard Oettle <howard@mallidax.net> - 0.2-2
+- Renamed script from scribble to scribble.py, but keep the same installed script name
+
 * Fri May 27 2011 David Robinson <zxvdr.au@gmail.com> - 0.2-1
 - New release
 
